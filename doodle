@@ -1,0 +1,20 @@
+from typing import NewType
+
+UserId = NewType("UserId", str)
+OrgId = NewType("OrgId", str)
+PackageId = NewType("PackageId", str)
+
+user_id = UserId("1")
+org_id = OrgId("2")
+package_id = PackageId("3")
+
+
+def assign_package(
+    org_id: OrgId, 
+    user_id: UserId, 
+    package_id: PackageId,
+) -> None:
+    ...
+
+
+assign_package(user_id, org_id, package_id)
